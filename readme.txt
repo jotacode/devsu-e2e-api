@@ -2,6 +2,8 @@
 
 Clonar el repositorio
 Git clone https://github.com/jotacode/devsu-e2e-api.git
+Entrar a la carpeta raíz
+cd devsu-e2e-api/
 Instalar las librerías necesarias
 npm install
 Ejecutar las pruebas con interfaz gráfica
