@@ -27,7 +27,7 @@ it('add 2 products to the cart and complete the purchase', ()=>{
             cy.get('#totalp').then(($total)=>{
                 cy.get('#tbodyid tr.success:nth-child(1) td:nth-child(3)').then(($valueProduct1)=>{
                     cy.get('#tbodyid tr.success:nth-child(2) td:nth-child(3)').then(($valueProduct2)=>{
-                        expect(parseInt($total.text())).to.eq(parseInt($valueProduct1.text())+parseInt($valueProduct2.text()))
+                        expect(parseInt($total.text())).to.eq(parseInt($valueProduct1.text())+parseInt($valueProduct2.text())) 
                     })    
                 })
 

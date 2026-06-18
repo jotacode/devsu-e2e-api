@@ -1,0 +1,29 @@
+Conclusiones
+
+- Para hacer dinámica la selección de productos, se añadió un método de generación de
+un número aleatorio entre 0 y 8, para seleccionar aleatoriamente productos de los 9 mostrados
+en el home de la página demoblaze, de igual manera al llegar al carrito se valida que el mismo
+producto seleccionado aleatoriamente sea el que se muestra en el carrito (validando por título
+de producto)
+- Al momento de cargar el carrito, la página presenta una aleatoriedad en la lista de productos, 
+por lo tanto el primer producto agregado no siempre se muestra de primero en la lista del carrito,
+por consiguiente la validación de los nombres de los productos fue ligeramente modificada para que
+buscara el nombre de los productos en la lista de nombres de productos, a diferencia del precio, 
+que sin importar el orden en el que aparezcan, la validación es que la suma de los precios de los 
+productos agregados debe ser igual al total mostrado en el carrito y al total mostrado al finalizar
+la compra
+- El test que agrega 2 productos al carrito podría modificarse para ser más genérico y que pueda 
+agregar n productos al carrito, para otro tipo de prueba
+- En cada ejercicio se utilizaron diferentes fuentes de datos para las pruebas dependiendo de su naturaleza
+- En el primer ejercicio se importan los datos de un archivo externo .fixture pues en este caso, 
+se necesitan datos constantes y válidos para pasar la prueba, ejemplo, tarjeta de crédito válida
+- Mientas en el segundo ejercicio se hace uso de la librería externa Faker, que genera datos 
+aleatorios para usuario y contraseña, para que en cada ejecución, se generen nuevos usuarios y el 
+test pase.
+- En el primer ejercicio e2e, el método addToCart() es una muestra de la reutilización de código,
+cuando se detecta un paso o serie de pasos que se repiten a través del test o tests
+- En el caso del ejercicio de api, la sola validación del código de status no es suficiente 
+para verificar que el servicio responda como debe ser, pues siempre devuelve 200, en esos casos
+es necesaria una validación adicional, en este caso el mensaje en el body
+- Para efectos de prueba, en el tercer test de api, el password es enviado en texto plano, 
+pero esta práctica no es recomendada en casos reales.
